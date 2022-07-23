@@ -1,0 +1,160 @@
+.billing-info {
+  display: block;
+  border: 1px solid #2dafe2;
+  padding: 15px;
+  background: $white;
+
+  @media (min-width: 481px) {
+    padding: 30px 30px;
+  }
+
+  text-align: left;
+  position: relative;
+  margin-bottom: 50px;
+
+  ul.plan-new {
+    li {
+      display: inline-block;
+      width: 25%;
+      padding: 10px;
+      vertical-align: top;
+      font-size: 16px;
+
+      .checkbox-in {
+        @include checkbox-my-b2c;
+        font-weight: 400 !important;
+      }
+
+      .container {
+        font-weight: 400 !important;
+      }
+    }
+  }
+
+  .anu-plan {
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+    li {
+      display: block;
+    }
+  }
+
+  .row {
+    margin-bottom: 10px;
+
+    .StripeElement {
+      @include input-b2c;
+      width: 100%;
+      @include flexbox;
+      @include align-items(center);
+      padding: 0px 15px;
+
+      .__PrivateStripeElement {
+        width: 100%;
+      }
+    }
+  }
+
+  h3 {
+    @include fontSize(40px);
+    font-weight: 300;
+    font-family: $font-family-roboto;
+    color: $blue1;
+    padding-bottom: 0;
+    text-align: left;
+    color: #003da5;
+  }
+
+  label {
+    @include fontSize(16px);
+    font-weight: 400;
+    display: block;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    @include input-b2c;
+    width: 100%;
+  }
+
+  .checkbox-in {
+    @include checkbox-my-b2c;
+  }
+
+  .select {
+    display: inline-block;
+    width: 100%;
+    @include select-b2c;
+  }
+
+  .checkbox-in {
+    @include checkbox-my-b2c;
+
+    .container {
+      font-size: 16px;
+      font-weight: 900;
+      color: $black;
+
+      a {
+        color: #008ac4;
+      }
+    }
+  }
+
+  .coupon-input {
+    @include input-b2c;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+
+    @media (min-width: 481px) {
+      width: 75%;
+      border-right: none;
+    }
+  }
+
+  .coupon-but {
+    background: #2dafe2;
+    @include fontSize(21px);
+    color: $white;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #2dafe2;
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    margin-bottom: 20px;
+
+    @media (min-width: 481px) {
+      margin-left: -5px;
+      width: 25%;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// .billing-info:after {
+//   z-index: -1;
+//   content: "";
+//   position: absolute;
+//   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   height: 20%;
+//   left: 15%;
+//   right: 15%;
+//   width: 70%;
+//   bottom: 0px;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   border-radius: 100%;
+// }
+
+.ant-modal.ant-modal-confirm.ant-modal-confirm-confirm .ant-modal-confirm-btns button {
+  text-transform: uppercase;
+}

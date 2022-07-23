@@ -1,0 +1,577 @@
+#banner {
+  background: url(./images/main-bg.png) top center no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  position: relative;
+
+  // margin-top: 100px;
+  @include media-breakpoint-up(md) {
+    // margin-top: 142px;
+  }
+
+  z-index: 0;
+  @import "banner-steps/title-banner";
+  @import "banner-steps/wizard";
+  @import "banner-steps/three-product";
+  @import "banner-steps/plan-travel";
+  @import "banner-steps/personal-info";
+  @import "banner-steps/traveller-alerts";
+  @import "banner-steps/billing-info";
+  @import "banner-steps/purchase-summary";
+  @import "banner-steps/thank-you";
+
+  .marg20 {
+    margin-top: 30px;
+  }
+
+  .upgrade {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(7);
+    }
+  }
+
+  .next-box {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(5);
+    }
+  }
+
+  //comman next and back button
+  .next-back {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+
+    padding: 50px 0;
+
+    .wrap {
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: right;
+      }
+    }
+
+    button {
+      border: none;
+      display: inline-block;
+      margin: 20px 10px;
+      min-width: 120px;
+      padding: 0 40px;
+      height: 46px;
+      border-radius: 5px;
+      color: $white;
+      @include fontSize(21px);
+      background: #2dafe2;
+      font-family: $font-family-roboto;
+      outline: none;
+      box-shadow: none;
+    }
+
+    button.back {
+      // background: $gray-button;
+      margin-left: 0;
+    }
+
+    button.next {
+      //  background: $green;
+      margin-right: 0;
+    }
+
+    //upgrade plans
+
+    ul.upgrade-plans {
+      display: block;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
+
+      .st0 {
+        fill: #ffffff;
+      }
+
+      .st1 {
+        fill: #75bce8;
+      }
+
+      li {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        width: 180px;
+        height: 190px;
+        background: $blue3;
+        margin: 20px 10px;
+        text-align: center;
+
+        svg {
+          position: absolute;
+          bottom: -20px;
+          right: -20px;
+          max-width: 85px;
+        }
+
+        a {
+          display: block;
+          width: 180px;
+          height: 190px;
+          padding: 15px 20px;
+          color: $white;
+
+          strong {
+            font-weight: 700;
+          }
+
+          //product name
+          .product-name {
+            height: 90px;
+            border-bottom: 2px solid $white;
+            font-family: $font-family-sans-serif;
+            font-size: 16px;
+
+            .name {
+              font-weight: 300;
+              display: block;
+            }
+          }
+
+          //product price
+          .price-more {
+            display: block;
+            padding-top: 10px;
+
+            .price {
+              font-size: 32px;
+              display: block;
+              font-family: $font-family-roboto;
+              font-weight: 700;
+            }
+
+            .more {
+              font-size: 16px;
+              font-style: italic;
+              display: block;
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .add-traveler {
+    padding-top: 50px;
+
+    .wrap {
+      text-align: left;
+    }
+
+    button {
+      background: #2dafe2;
+      color: $white;
+      height: 35px;
+      @include fontSize(18px);
+      font-family: $font-family-roboto;
+      padding: 0 30px;
+      display: inline-block;
+      border: none;
+    }
+  }
+
+  .disclaimer {
+    font-style: italic;
+    color: #939598;
+    font-size: 14px;
+    padding: 3px 10px;
+  }
+}
+
+#faq {
+  .mobile {
+    display: inline-table;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  .desktop {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .wrap {
+    padding: 0 30px;
+    text-align: left;
+    padding-bottom: 70px;
+  }
+
+  h3 {
+    @include fontSize(40px);
+    font-weight: 300;
+    font-family: $font-family-roboto;
+    color: $blue1;
+    padding-bottom: 0;
+    text-align: left;
+    color: #003da5;
+  }
+
+  table {
+    border-collapse: collapse;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+
+    p {
+      margin: 0 !important;
+      padding: 10px 0 !important;
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray3b3;
+    }
+  }
+
+  table th {
+    font-size: 16px;
+    color: $blue1;
+    font-weight: 700;
+    background: white;
+  }
+
+  table tr {
+    //border-bottom: 1px solid #ddd;
+  }
+
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    width: 60%;
+    text-align: left;
+  }
+
+  table th,
+  table td {
+    //padding: 5px 0;
+    text-align: center;
+
+    .fas {
+      color: $green;
+      font-size: 25px;
+    }
+  }
+
+  thead th {
+    //position: sticky;
+    // position: sticky;
+    top: 142px;
+    background: white;
+    z-index: 100;
+  }
+
+  table table th,
+  table table td {
+    padding: 15px 20px;
+    text-align: center;
+
+    .fas {
+      color: $green;
+      font-size: 25px;
+    }
+  }
+
+  table .title {
+    background: #f3f4f4;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+
+    .accordion__button {
+      color: black;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .border {
+    border-bottom: 1px solid #ddd;
+  }
+
+  @media screen and (max-width: 780px) {
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      th {
+        display: none;
+
+        &:first-child {
+          display: inline-block;
+          padding-bottom: 0 !important;
+
+          h3 {
+            margin: 0px;
+            padding: 0px;
+          }
+        }
+      }
+    }
+
+    table tr {
+      //border-bottom: 3px solid #ddd;
+      display: block;
+      //margin-bottom: 0.625em;
+    }
+
+    table th:nth-child(1),
+    table td:nth-child(1) {
+      width: 100%;
+      text-align: left !important;
+      padding: 20px 20px;
+      line-height: normal;
+      height: auto;
+    }
+
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 16px;
+      min-height: 50px;
+      line-height: 30px;
+      color: $blue1;
+      font-weight: 700;
+      text-align: right !important;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:nth-child(1) {
+      width: 100%;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+
+    table thead th:nth-child(1),
+    table tbody td:nth-child(1) {
+      padding: 20px 0px;
+
+      table td {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .accordion {
+    text-align: left;
+  }
+
+  .accordion__item+.accordion__item {
+    text-align: left;
+  }
+
+  .accordion__button {
+    color: $blue4;
+    cursor: pointer;
+    //padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+
+  .accordion__button:focus {
+    outline: none;
+  }
+
+  .accordion__button:before {
+    float: left;
+    content: "[+]";
+    height: 10px;
+    width: 10px;
+    height: 25px;
+    width: 25px;
+    white-space: nowrap;
+
+    @media screen and (max-width: 780px) {
+      margin-right: 10px;
+    }
+  }
+
+  .accordion__button[aria-expanded="true"]::before,
+  .accordion__button[aria-selected="true"]::before {
+    content: "[-]";
+    letter-spacing: 2px;
+  }
+
+  .accordion__panel {
+    //padding: 20px;
+    animation: fadein 0.35s ease-in;
+  }
+
+  /* -------------------------------------------------- */
+  /* ---------------- Animation part ------------------ */
+  /* -------------------------------------------------- */
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (device-aspect-ratio: 2/3) {
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"] {
+    font-size: 16px;
+  }
+}
+
+/* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
+@media screen and (device-aspect-ratio: 40/71) {
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"] {
+    font-size: 16px;
+  }
+}
+
+/* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
+@media screen and (device-aspect-ratio: 375/667) {
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"] {
+    font-size: 16px;
+  }
+}
+
+/* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
+@media screen and (device-aspect-ratio: 9/16) {
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"] {
+    font-size: 16px;
+  }
+}
+
+.price-sticky-head {
+  position: static !important;
+}
+
+.ant-form-item .react-datepicker__tab-loop {
+  position: absolute;
+  margin-top: -55px;
+}
+
+#row-cap-advantage-assistance table:first-child tr:not(.border) td,
+#row-cap-advantage-assistance-mobile table:first-child tr:not(.border) td {
+  background-color: #0f6cac;
+  color: #fff;
+  border: none;
+}
+
+#row-cap-advantage-assistance-mobile table:first-child tr:not(.border) td div {
+  color: #fff !important;
+}
+
+.btn-blue {
+  background-color: #0088c2 !important;
+  color: #fff !important;
+}
+
+.fae {
+  color: #df2020 !important;
+  font-size: 25px;
+}

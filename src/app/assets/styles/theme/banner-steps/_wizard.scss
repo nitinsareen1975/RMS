@@ -1,0 +1,94 @@
+//Wizard
+.wizard {
+  display: block;
+  ul {
+    @include flexbox;
+    @include justify-content(center);
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 20px 0;
+      padding-right: 10px;
+      width: 100%;
+      @include media-breakpoint-up(sm) {
+        padding-right: 30px;
+        width: auto;
+      }
+      position: relative;
+      vertical-align: top;
+      @include media-breakpoint-up(md) {
+        padding: 10px 0;
+        padding-right: 60px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding: 10px 0;
+        padding-right: 90px;
+      }
+      img,
+      svg {
+        max-width: 40px;
+        height: 30px;
+        @include media-breakpoint-up(md) {
+          max-width: 60px;
+          height: 50px;
+        }
+      }
+
+      .st0 {
+        fill: #0089c4;
+        stroke: #231f20;
+        stroke-width: 7;
+      }
+      .st1 {
+        fill: #231f20;
+      }
+      .st2 {
+        fill: #ffffff;
+      }
+    }
+    li:first-child {
+      padding-left: 0;
+    }
+    li:last-child {
+      padding-right: 0;
+    }
+    li.active {
+      .st2 {
+        fill: #0089c4;
+      }
+    }
+    li .name {
+      display: block;
+      padding-top: 20px;
+      font-size: 13px;
+      @include media-breakpoint-up(sm) {
+        font-size: 16px;
+      }
+      color: $black;
+      font-family: $font-family-base;
+    }
+    li span:after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid #000;
+      top: 0;
+      left: 30px;
+      height: 30px;
+      width: 100%;
+      z-index: -1;     
+    }
+    li:nth-child(4) span:after {
+      left: 40px;
+      height: 30px;
+      width: 95%;
+    }
+    li:nth-child(2) span:after {
+      left: 28px;
+      height: 30px;
+      width: 95%;
+    }
+    li:last-child span:after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.purchase-summary {
+  display: block;
+  border: 1px solid #2dafe2;
+  background: $white;
+  padding: 30px 30px;
+  text-align: left;
+  position: relative;
+
+  .ant-checkbox-wrapper b {
+    font-size: 18px !important;
+    display: inline-block;
+    margin: 10px;
+    color: #003da5;
+    font-weight: 400;
+  }
+
+  .row,
+  .ant-row {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    border-bottom: $border-input;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 30%;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+
+    li:last-child {
+      width: 70%;
+    }
+  }
+
+  h3 {
+    @include fontSize(40px);
+    font-weight: 300;
+    font-family: $font-family-roboto;
+    color: $blue1;
+    padding-bottom: 0;
+    text-align: left;
+    color: #003da5;
+  }
+
+  hr {
+    border-bottom: $border-input;
+    height: 1px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: block;
+    clear: both;
+  }
+
+  .name {
+    @include make-col-ready();
+    border-bottom: $border-input;
+
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+  }
+
+  .description {
+    @include make-col-ready();
+    border-bottom: $border-input;
+
+    @include media-breakpoint-up(md) {
+      @include make-col(9);
+    }
+  }
+
+  .plansummary-check {
+    .ant-checkbox-wrapper {
+      @include media-breakpoint-down(md) {
+        text-align: left;
+        position: relative;
+        padding-left: 25px;
+
+        .ant-checkbox {
+          position: absolute;
+          left: 0px;
+        }
+
+        span {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+// .purchase-summary:after {
+//   z-index: -1;
+//   content: "";
+//   position: absolute;
+//   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   height: 20%;
+//   left: 15%;
+//   right: 15%;
+//   width: 70%;
+//   bottom: 0px;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   border-radius: 100%;
+// }

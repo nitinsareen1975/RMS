@@ -1,0 +1,120 @@
+$sidebar-minWidth: 98px;
+.sidebar-nav-menu{
+    min-width: $sidebar-minWidth;
+    @include custom-shadow( 0px 8px 10px 0px rgba(0, 0, 0, 0.15));
+    .sidenav---sidenav---_2tBP{
+        background-color: $white;
+        min-width: $sidebar-minWidth;
+        &.sidenav---expanded---1KdUL{
+            min-width: 320px;
+            @include custom-shadow( 0px 8px 10px 0px rgba(0, 0, 0, 0.15));
+            .sidenav---sidenav-toggle---1KRjR{
+                .sidenav---icon-bar---u1f02:nth-child(3){
+                    margin-top: -10px;
+                }
+            }
+            .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- .sidenav---navicon---3gCRo + .sidenav---navtext---1AE_f{
+                display: inline-block;
+                max-width: 300px;
+                visibility: visible;
+            }
+        }
+        // Toggle Button css
+        .sidenav---sidenav-toggle---1KRjR{
+            width: $sidebar-minWidth;
+            height: 70px;
+            .sidenav---icon-bar---u1f02{
+                background: $blue1;
+                opacity: 1;
+                height: 3px;            
+            }
+        }
+        // menu css
+        .sidenav---sidenav-nav---3tvij{            
+            .sidenav---sidenav-navitem---uwIJ-{
+                &.sidenav---expanded---1KdUL{
+                    .sidenav---sidenav-subnav---1EN61{
+                        box-shadow: none;
+                        padding-left: 58px;
+                        background-color: $gray-f5f;
+                    }
+                }
+                >.sidenav---navitem---9uL5T{
+                    height: 65px;
+                    @include flexbox;
+                    @include align-items(center);
+                    .sidenav---navicon---3gCRo{
+                        width: $sidebar-minWidth;
+                        margin-right: -20px;  
+                        opacity: 1;                      
+                        svg{
+                            width: 25px;
+                            height: 22px;
+                        }
+                    }
+                    .sidenav---navtext---1AE_f{
+                        color: $black;
+                        @include fontSize(15px);
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-family: $font-family-roboto;
+                        display: inline-block;
+                        max-width: 0;
+                        overflow: hidden;
+                        visibility: hidden;
+                        transition: all 0.15s;
+                        span{
+                            color: $black;
+                            @include fontSize(15px);
+                        }
+                    }
+                    &:after{
+                        display: none;
+                    }                    
+                }
+                // Submenu css
+                .sidenav---sidenav-subnav---1EN61{
+                    left: $sidebar-minWidth;
+                    @include custom-shadow( 6px 2px 5px rgba(0, 0, 0, 0.07));
+                    border: none;
+                    .sidenav---navitem---9uL5T{
+                        &:before{
+                            display: none;
+                        }
+                        &:hover{
+                            background-color: $gray-f5f;
+                            span{
+                                opacity: 1;
+                            }
+                        }
+                        
+                    }
+                    .sidenav---selected---1EK3y{
+                        span{
+                            opacity: 1;
+                        }  
+                    }
+                    span{
+                        color: $black;
+                        @include fontSize(14px);
+                        line-height: 35px;
+                        display: inline-block;
+                        width: 100%;
+                        font-weight: 600;
+                        opacity: 0.8;
+                    }
+                }
+                // Select menu item css
+                &.sidenav---expanded---1KdUL{
+                    >.sidenav---navitem---9uL5T{
+                        border-bottom:1px solid $gray-200; 
+                    }
+                }
+                &.sidenav---highlighted---oUx9u, &:hover{
+                    background-color: $gray-f5f;
+                }
+            }
+
+        }
+    }
+}

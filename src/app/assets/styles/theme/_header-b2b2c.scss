@@ -1,0 +1,59 @@
+#headerb2b2c {
+	position: relative;
+	width: 100%;
+	left:0;
+	top:0;
+	z-index: 101;
+	background-color: white;
+	height: 95px;
+	@include  transition (top 0.5s ease-in-out);
+    &.nav-up {
+        top: -95px;
+    }
+    @media (max-width: 767px) {
+        height: 89px;
+         &.nav-up {
+            top: -89px;
+        }
+    }
+	@media (max-width: 767px) {
+		height: 87px;	
+	}
+	.headerb2b2c-inner{
+		background: white;
+		position: fixed;
+		left: 0px;
+		right: 0;
+		border-top: 5px solid $theme-blue;
+		@include shadow1;
+	}
+	.wrap {
+		text-align: left;
+		max-width: 1330px;
+		.top-header {
+			padding: 10px 0px;
+			.row {
+				@media (max-width: 767.98px) {
+					@include flexbox;
+					@include flex-wrap(nowrap);
+				}
+				.logo {
+					a {
+						display: inline-block;
+						@media (max-width: 767.98px) {
+							max-width: 92px;
+							overflow: hidden;
+						}
+						img {
+							max-width: 335px;
+							max-height: 90px;
+							@media (max-width: 767.98px) {
+								max-width: 265px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

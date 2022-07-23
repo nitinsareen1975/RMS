@@ -1,0 +1,101 @@
+footer{
+  background: $drak-blue;
+  border-top: 5px solid $theme-blue;
+  padding-top: 40px;
+  .wrap{
+      text-align: left;
+  }
+  img{
+      max-width: 100%;
+  }
+  h3, h4{
+      color: $theme-blue;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+  }
+  p, li, a, span{
+      color: $theme-blue;
+      font-size: 17px;
+      font-weight: 300;
+  }
+  p{
+      margin-bottom: 1rem;
+      font-size: 15px;
+      a{
+          font-size: 15px;
+      }
+  }
+  a{
+      text-decoration: underline;
+      &[href="/why-buy-cap"], &[href="/"]{
+          pointer-events:none;
+      }
+      &.nav-link{
+          padding: 0px;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+      }
+      &:hover{
+          text-decoration: none;
+          color: $white;
+      }
+  }
+  ul{
+      padding: 0px;
+      list-style:none;
+      &.flex-column{
+         ul{
+              ul{
+                  li {
+                  list-style: disc;
+                  }
+              }
+         }
+      }
+      
+      a{
+          font-size: 15px;
+      }
+      &.nav{
+          padding: 0px;
+          li{
+              list-style: none;
+              font-size: 15px;
+              ul{
+                  padding-left: 20px;
+                  li{
+                      a{
+                          &.nav-link{
+                              font-weight: 400;
+                              text-decoration: underline;
+                              margin:0px;
+                              font-size: 15px;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+  .social-links{
+      display: flex;
+      li{
+          margin-right: 10px;
+          max-width: 45px;
+      }
+  }
+  .footer-icon{
+      margin-left: -20px;
+  }
+  .copyright-text{
+      border-top: 1px solid $theme-blue;
+      margin-top: 30px;
+      padding: 15px 0;
+      margin-bottom: 0;
+      width: 100%;
+      color: $theme-blue;
+  }
+}

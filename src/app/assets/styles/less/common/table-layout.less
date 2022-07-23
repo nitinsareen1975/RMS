@@ -1,0 +1,53 @@
+.theme-table{
+    .ant-table {
+        background: none;  
+        table {
+            border-spacing: 0px 10px;
+            button.ant-btn {
+                background: none;
+                border: none;
+            }
+            .anticon{
+                svg {fill: #000;}
+            }
+            thead{
+                th {
+                    background: none !important;
+                }            
+            }
+            tbody{
+                tr{
+                    td {
+                        background: #fff;
+                        padding: 10px 20px;
+                        &:first-child {
+                            border-radius: 5px 0px 0px 5px;
+                        }
+                        &:last-child {
+                            border-radius: 0px 5px 5px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.appointment-table{
+    .ant-card-body {
+        padding:20px 20px 0px;
+        td{
+            border-radius: 0px;
+            button{
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+}
+
+.medium-padding{
+    .ant-card-body {
+        padding:12px;
+    }
+}

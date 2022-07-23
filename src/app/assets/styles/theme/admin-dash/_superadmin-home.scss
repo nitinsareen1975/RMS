@@ -1,0 +1,94 @@
+.super-admin-home{
+    background-color: $gray-f0f;
+    margin: -24px;
+    min-height: calc(100vh - 112px);
+    padding-bottom: 35px;
+    .listCompany{
+        .companyName{
+            position: relative;
+            padding-left: 40px;
+            .anticon{
+                position: absolute;
+                left: 0px;
+            }
+        }
+        .btn-outline{
+            background: none;
+            float: right;
+            color: $black;
+            border-color: $gray-9ca;
+            height: 35px;
+            &:hover{
+                background: $green;
+                border-color: $green;
+                color: $white;
+            }
+        }
+        .ant-table-pagination{
+            margin-right: 24px;
+            .anticon {
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+            }
+        }
+        .addBtn{
+            color: $white;
+            border:none;
+            &:hover{
+                opacity: 0.9;
+            }
+            i{
+                float: left;
+                position: relative;
+                top: 3px;
+            }
+        }
+        .ant-checkbox-inner{
+            background: #dbeaf2;
+        }
+        .ant-checkbox-checked .ant-checkbox-inner{
+            background: $green;
+            border-color: $green;
+        }
+    }
+}
+.NotificationsAlertSection{
+    background-color: $gray-f5f;   
+   // margin-top: 30px;
+    padding: 20px 15px;
+    .ant-result{
+        padding: 0px;
+        margin-bottom: 0;
+        .ant-result-icon{
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .ant-result-title{
+            text-align: left;
+            margin-top: -10px;
+            font-size: 18px;
+        }
+    }
+    .ant-progress{
+        >div{
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include justify-content (flex-end);
+            .ant-progress-text{
+                font-size: 16px;
+                width: auto;
+                font-weight: 600;
+                color: #3b3b3b;
+                position: relative;
+                top: -7px;
+            }
+            .ant-progress-outer {
+                margin: 0;
+                padding: 0;
+                order: 1;
+            }
+        }
+    }
+}
+

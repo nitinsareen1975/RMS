@@ -1,0 +1,15 @@
+.alertAdvice{
+    text-align: center;
+    font-weight: 600;
+    padding: 25px 20px;
+    background: #FFF9D0;
+    text-transform: uppercase;
+    border: 1px solid #F4DC2A;
+    margin: 20px 0px;
+    display: block;
+}
+
+.ant-typography.alertAffectedRegion code{
+    background: $blue1; 
+    color: $white;
+}

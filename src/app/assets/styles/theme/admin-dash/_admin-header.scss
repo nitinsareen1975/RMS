@@ -1,0 +1,168 @@
+$header-min_height: 70px;
+.app-header{
+    min-height: $header-min_height;
+    position: relative;     
+    width: 100%;
+    @include flexbox;
+    @include justify-content (flex-end);
+    .app-header-inner{
+        position: fixed;
+        width: calc(100% - 97px);
+        background: $white; 
+        @include flexbox;
+        @include flex-wrap(wrap);
+        z-index: 9999;   
+        top: 0;
+        min-height: $header-min_height;
+        @include custom-shadow(10px 5px 10px 0px rgba(0, 0, 0, 0.05));
+        .column-left{
+            @include make-col-ready;
+            @include make-col(6);
+            @include flexbox;
+            @include align-items(center);
+            .logo{
+                @include make-col-ready;
+                @include make-col(3);
+                padding: 0px;
+                svg{
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .search{
+                @include make-col-ready;
+                @include make-col(9);
+                .search-fileds{
+                    position: relative;
+                    width: 100%;
+                    input[type="search"]{
+                        width: 100%;
+                        box-shadow: 0px 5px 10px 0px rgba(156, 164, 172, 0.18);
+                        border:1px solid $gray-9ca;
+                        border-radius: 30px;
+                        height: 40px;
+                        padding: 5px 15px; 
+                        outline: none;
+                    }
+                    .search-btn{
+                        position: absolute;
+                        right: 5px;
+                        background-color: $blue2;
+                        color: $white;
+                        border-radius: 100px;
+                        height: 32px;
+                        width: 32px;
+                        font-size: 15px;
+                        top: 4px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .column-right{
+            @include make-col-ready;
+            @include make-col(6);
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include justify-content (flex-end);
+            @include align-items(center);
+            color: $gray-9ca;
+            .counter{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: $blue1;
+                color: $white;
+                @include fontSize(12px);
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(center);
+                top: -10px;
+                right: -10px;
+                border-radius: 100px;
+            }
+            .alerts{
+                position: relative;
+                margin: 0px 10px;                
+                @include media-breakpoint-up(xl) {
+                    margin: 0px 20px;                
+                }
+                i{
+                    @include fontSize(20px);
+                }               
+            }
+            .notification{
+                position: relative;
+                margin: 0px 10px;                
+                @include media-breakpoint-up(xl) {
+                    margin: 0px 20px;                
+                }
+                i{
+                    @include fontSize(20px);
+                }
+            }
+            .language-option{               
+                .SwitchBlock{    
+                    margin: 0px 10px;                
+                    @include media-breakpoint-up(xl) {
+                        margin: 0px 20px;                
+                    }
+                    h4{
+                        display: none;
+                    }
+                    .SwitchBtnWrapper{
+                        background-color: $white;
+                        @include custom-shadow(0px 5px 10px 0px rgba(0, 0, 0, 0.19));
+                        border-radius: 30px;
+                        @include flexbox;
+                        @include align-items(center);
+                        height: 38px;
+                        padding: 0 15px;
+                        &:before{
+                            content: "\f57d";
+                            font-weight: 900;
+                            font-family: "Font Awesome 5 Free";
+                            @include fontSize(20px);
+                        } 
+                        select{
+                            border: none;
+                            outline: none;
+                            color: $gray-9ca;
+                            @include fontSize(14px);
+                            margin-left: 5px;
+                            margin-top: -2px;
+                        }
+                    }
+                }
+               
+            }
+            .admin-details{
+                background-color: $white;
+                @include custom-shadow(0px 5px 10px 0px rgba(0, 0, 0, 0.19));
+                border-radius: 30px;
+                height: 40px;
+                padding: 0px 10px;
+                @include media-breakpoint-up(xl) {
+                    height: 38px;
+                    padding: 0 15px;
+                }
+                @include flexbox;
+                @include fontSize(14px);
+                @include align-items(center);
+                i{
+                    @include fontSize(22px);
+                    float: left;
+                    @include media-breakpoint-up(xl) {
+                        margin-right: 8px;   
+                    }
+                }
+                span{
+                    display: none;
+                    @include media-breakpoint-up(xl) {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+}
+.wrap900 {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+}
+.wrap600 {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+}
+.wrap1500 {
+  max-width: 1500px;
+  display: flex;
+  @include justify-content(space-between);
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+}
+.row {
+  @include make-row;
+}
+.full-width {
+  @include make-col-ready();
+  @include media-breakpoint-up(md) {
+    @include make-col(12);
+  }
+}
+.half-width {
+  @include make-col-ready();
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+  }
+}
+.clear-fix {
+  clear: both;
+  display: block;
+  height: 1px;
+}
+a {
+  @include fontSize(16px);
+}
+
+p {
+  @include fontSize(13px);
+  @include media-breakpoint-up(md) {
+    @include fontSize(16px);
+  }
+}
+
+.app-container {
+  .app-container_outer {
+    @include flexbox;
+    min-height: 100vh;
+    @include flex-direction(column);
+    margin: 0;
+  }
+  .app-main {
+    @include flex(1);
+    @include flexbox;
+    .app-main__outer {
+      @include flex(1);
+      @include flex-direction(column);
+      @include flexbox;
+    }
+  }
+}
+
+.ant-modal.ant-modal-confirm .ant-modal-confirm-btns button{
+  text-transform: uppercase;
+}
+.ant-modal-footer button {
+  text-transform: uppercase;
+}
+.SwitchBlock.language ul {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

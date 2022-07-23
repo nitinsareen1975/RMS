@@ -1,0 +1,406 @@
+.gotomapbtn{
+    padding-left: 0px;
+    border: none;
+    background: $white;
+    color: $black;
+    box-shadow: none;
+    border-radius:0px;
+    display: inline-block;
+    &:hover, &:focus{
+        background: $white !important;
+        color: $black !important;
+        text-shadow: none;
+    }
+    .arrow-icon{
+        background-color: $blue1;
+        color: $white;
+        padding: 9px;
+        margin-right: 10px;
+    }
+    .sign-icon{
+        margin-right: 5px;
+        color: $blue1;
+    }
+}
+
+.traveller-map-box{
+    position: relative;
+    .gotomapbtn{
+        position: absolute;
+        top: 90px;
+        right:-20px;
+        padding:0;
+        padding-right:20px;
+        background:white !important; 
+        color: $black !important;   
+        &:hover{
+            color: $black !important;  
+        }
+    }
+}
+
+.ant-card-bordered.fullItineryDetails{
+    margin: -48px;
+    border: none;
+    .ant-card-body{
+        padding: 0px;
+        .traveller-filter{
+            position: absolute;
+            right: 0px;
+            width: calc(100% - 60px);
+            bottom: 0px;
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include  justify-content (flex-end);
+            margin-right: 60px;
+            &.traveller-notifation{
+                .TravelfilterList{
+                    .travellerNotifationTabs{
+                        width: 100%;
+                        .ant-tabs-card-bar{
+                            border: none;
+                            .ant-tabs-tab{
+                                height: 20px;
+                                line-height: 20px;
+                                background:none;
+                                border: none;
+                                border-right: 1px solid $black;
+                                border-radius: 0;
+                                span{
+                                    i{
+                                        background-color: $black;
+                                        color: $white;
+                                        width: 20px;
+                                        display: inline-block;
+                                        text-align: center;
+                                        font-size: 11px;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                &.ant-tabs-tab-active{
+                                    span{
+                                        i{
+                                            background-color: $blue1;
+                                        }
+                                    }  
+                                }
+                            }
+                        }
+                        .ant-table-body{
+                            background: $white;
+                            @include fontSize(11px);
+                            td, th{
+                                @include fontSize(11px);
+                                padding: 12px;
+                                a{
+                                    @include fontSize(11px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1400px) {
+                &.alert-filter{
+                    .gotomapbtn{
+                        margin-right: 196px !important;
+                    }
+                }
+                &.risk-level-filter{
+                    .gotomapbtn{
+                        margin-right: 368px !important;
+                    }
+                }
+                &.assist-filter{
+                    .gotomapbtn{
+                        margin-right: 573px !important;
+                    }
+                }
+                &.traveler-location-filter{
+                    .gotomapbtn{
+                        margin-right: 708px !important;
+                    }
+                }
+                &.asset-filter{
+                    .gotomapbtn{
+                        margin-right: 900px !important;
+                    }
+                }
+            }
+            .gotomapbtn{      
+                font-size: 16px;
+                height: 45px;
+                background: white;
+                color: #001529;
+                border: #001529;  
+                padding-right:20px; 
+                position: relative;
+                @media (max-width: 1400px) {
+                    font-size: 14px;  
+                    width: auto !important;
+                }
+                .arrow-icon {
+                    width: 45px;
+                    height: 45px;
+                    padding: 14px;
+                    @media (max-width: 1400px) {
+                        width: 38px;  
+                    }
+                }     
+                button[role="switch"]{
+                    position: absolute;
+                    border-radius: 0px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 9;
+                    opacity: 0;
+                }
+            }
+            .TravelfilterList{
+                //height: 430px;
+                background: $gray-f0f;
+                padding: 20px;
+                margin: 0px !important;
+                width: 100%;
+                position: relative;
+                z-index: 99;
+                
+                    .ant-card{
+                        height: 100%;
+                        background-color: $white;
+                        text-align: left;
+                        .ant-card-head{
+                            background-color: #f9fafb;
+                            .ant-card-head-title{
+                                @include order(1);
+                                color: $black;
+                                text-transform: uppercase;
+                            }
+                            .ant-card-extra{
+                                color: $blue1;
+                                margin-right: 10px;
+                            }
+                        }
+                        .ant-card-body{
+                            padding: 15px;
+                            .ant-form-item-label{
+                                line-height: 14px;
+                                /* margin-bottom: 5px; */
+                                margin-top: 5px;
+                                height: 15px;
+                            }
+                            .ant-form-item{
+                                margin-bottom: 0px;  
+                            }
+                            .ant-select-selection--multiple {
+                                max-height: 90px;
+                                overflow-y: auto;
+                            }
+                        }
+                    
+                   
+                }
+                .TravelfilterBox{
+                    .ant-collapse{
+                        @include fontSize(11px);
+                        .ant-collapse-header{
+                            padding-top: 9.4px;
+                            padding-bottom: 9.4px;
+                        }
+                        .ant-form-item-label{
+                            line-height: normal;
+                            
+                        }
+                        label{
+                            @include fontSize(12px);
+                            margin-bottom: 2px;
+                        }
+                        button{
+                            @include fontSize(12px);
+                        }
+                        .ant-form-item{
+                            margin-bottom: 10px !important;
+                            &:last-child{
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+  
+}
+.height-240{
+    height:240px;
+}
+
+/*.mapTraveller>div{
+}*/
+.ant-spin-nested-loading {
+    height: 100%;
+}
+.mapTraveller>div{
+    height: 100%;
+}
+
+
+.mapTraveller .ant-spin-container, .mapTraveller .ant-spin-container .map {
+    height: 100%;
+    border:20px solid #ffffff;
+}
+.mapTraveller .ant-spin-container, .mapTraveller .ant-spin-container .map div{
+    left:0;
+    top:0;
+}
+
+
+.fullItineryDetails .gm-style-iw.gm-style-iw-c {
+    max-height: none !important;
+    border-radius: 0px !important;
+    padding: 0px;    
+    .gm-style-iw-d {
+        max-height: none !important;
+        background: $gray-f5f; 
+        &:before{
+            content: "";
+            background: $gray-f5f; 
+            position: absolute;
+            width: 100%;
+            height: 100%;
+    
+        }
+        &>div {
+            position: relative;
+        }
+        .markerAlretWindow{
+            padding: 10px;
+        }
+    }
+}
+
+
+
+.MapTravellerToolTip{
+    width: 560px;   
+    .ant-tabs-nav {
+        max-height: 250px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: none !important;
+    }
+    .ant-tabs-bar{
+        &.ant-tabs-left-bar{
+            margin-top: 16px;
+            max-width: 160px;
+            .ant-tabs-tab {
+                text-align: left;
+                padding: 0;
+                width: 100%;
+                margin-bottom: 0px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: 7px;
+                border: 1px solid transparent;
+                border-width: 1px 0px;
+                img {
+                    max-height: 20px;
+                }
+                &.ant-tabs-tab-active, &:hover{
+                    background: #fefefe; 
+                    border-color: #e1e7ed;
+                }
+            }
+            .ant-tabs-nav-container {
+                min-width: auto;
+                padding: 0 !important;
+            }
+        }
+    }
+    span.ant-tabs-tab-arrow-show {
+        display: none;
+    }
+    .ant-tabs-content{
+        .ant-tabs-tabpane {
+            background: $white;            
+            &.ant-tabs-tabpane-active{
+                margin-top: 20px;
+                box-shadow: 0 2px 7px 1px rgba(0,0,0,0.09);
+                margin-bottom: 10px;
+                margin-right: 5px;
+                display: inline-block;
+                width: 100%;
+            }
+            .headerContent{
+                background: $gray-f5f; 
+                font-size: 16px;
+                text-transform: uppercase;
+                padding: 10px;
+                display: inline-block;
+                width: 100%;
+                i{
+                    color: $blue1;
+                }
+            }
+            ul{
+                background: $white; 
+                font-size: 16px;
+                padding: 10px;
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                li{
+                    margin-bottom: 5px;
+                    span{
+                        color: #000;
+                        margin-right: 5px;
+                    }
+                    Button{
+                        padding: 0px;
+                        border: none;
+                        background: none;
+                        color: $blue1 !important;
+                        box-shadow: none;
+                        float: right;
+                        @include fontSize(20px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+    display: none !important;
+}
+
+
+.table-less{
+    .ant-table-body{
+        background: $white;
+        @include fontSize(11px);
+        td, th{
+            @include fontSize(11px);
+            padding: 12px;
+            a{
+                @include fontSize(11px);
+            }
+        }
+    }
+}
+
+
+.assist-info-window {
+    padding:15px;
+     ul{
+         display: block;
+         margin-bottom: 0;
+         li{
+             display: block;
+             padding:1px 0;
+             font-size:14px;
+         }
+     }
+}

@@ -1,0 +1,25 @@
+body{
+    .overlay-loader{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include bg-opacity($white, 0.80);
+        z-index: 9999;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-wrap(wrap);
+        .loader {            
+            .ant-spin-text {
+                width: 100%;
+                color: $black;
+                margin-top: 20px;
+            }
+            span.ant-spin-dot i {
+                background: $black;
+            }
+        }
+    }
+}

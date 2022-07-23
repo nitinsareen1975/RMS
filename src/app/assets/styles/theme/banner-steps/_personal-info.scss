@@ -1,0 +1,154 @@
+.personal-info {
+  display: block;
+  border: 1px solid #2dafe2;
+  background: $white;
+  padding: 30px 30px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 50px;
+
+  .ant-checkbox-wrapper b {
+    font-size: 18px !important;
+    display: inline-block;
+    margin: 10px;
+    color: #003da5;
+    font-weight: 400;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  .title-width {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+
+  .ant-select-selection-selected-value {
+    line-height: 50px;
+  }
+
+  .plan-width {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+    }
+  }
+
+  ul.plans-new {
+    text-align: left;
+    float: right;
+    width: 80%;
+    display: block;
+
+    li {
+      display: inline-block;
+      width: 33%;
+      padding: 0 10px;
+      vertical-align: top;
+    }
+  }
+
+  h3 {
+    @include fontSize(40px);
+    font-weight: 300;
+    font-family: $font-family-roboto;
+    color: $blue1;
+    padding-bottom: 0;
+    text-align: left;
+    color: #003da5;
+  }
+
+  hr {
+    border-bottom: $border-input;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    margin-top: -2px;
+    margin-bottom: 20px;
+    background: none;
+  }
+
+  label {
+    @include fontSize(16px);
+    line-height: normal;
+
+  }
+
+  input {
+    @include input-b2c;
+    width: 100%;
+    border-radius: 0 !important;
+
+    &[type=number] {
+      -webkit-appearance: none;
+      appearance: none;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  .checkbox-in {
+    @include checkbox-my-b2c;
+  }
+
+  .ant-select-selection--single {
+    position: relative;
+    height: 48px !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid #a7a9ac !important;
+  }
+
+  .select-box {
+    margin: 10px 0 !important;
+
+    .css-yk16xz-control {
+      border-radius: 0;
+      border: 1px solid #a7a9ac;
+    }
+
+    input {
+      margin: auto !important;
+      height: 35px !important;
+    }
+  }
+}
+
+// .personal-info:after {
+//   z-index: -1;
+//   content: "";
+//   position: absolute;
+//   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   height: 20%;
+//   left: 15%;
+//   right: 15%;
+//   width: 70%;
+//   bottom: 0px;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   border-radius: 100%;
+// }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.clear-fix-personal-detail {
+  height: 20px;
+}

@@ -1,0 +1,251 @@
+.plan-travel {
+  display: block;
+  border: 1px solid #2dafe2;
+  background: $white;
+  padding: 30px 0;
+  position: relative;
+
+  .ant-calendar-picker-input {
+    border: $border-input;
+    border-radius: 0 !important;
+    min-height: 48px;
+    line-height: 48px
+  }
+
+  .ant-select-selection--multiple {
+    white-space: nowrap;
+    max-height: 180px;
+    height: auto;
+    overflow: auto
+  }
+
+  .ant-select-selection {
+    border: $border-input;
+    border-radius: 0 !important;
+    min-height: 48px;
+    line-height: 48px
+  }
+
+  .ant-select-selection-selected-value {
+    line-height: 48px;
+    min-height: 48px;
+  }
+
+  .ant-select-selection__placeholder {
+    line-height: 32px;
+    min-height: 48px;
+  }
+
+  span.error {
+    color: red;
+    text-align: left;
+    display: block;
+  }
+
+  .main-div {
+    display: block;
+    text-align: center;
+    position: relative;
+
+    .in-div {
+      display: block;
+      padding: 15px;
+
+      @media (min-width: 481px) {
+        padding: 40px 30px;
+      }
+
+      border-bottom: 1px solid #a7a9ac;
+      margin: 30px auto;
+      background: $white;
+      position: relative;
+      width: 90%;
+    }
+
+    .in-div:last-child {
+      border: none;
+    }
+
+    .desc {
+      @include fontSize(20px);
+      padding: 20px 0;
+      font-family: $font-family-roboto;
+      font-weight: 300;
+
+      span {
+        color: red;
+      }
+    }
+
+
+
+    .react-datepicker-wrapper {
+      width: 100%;
+    }
+  }
+
+  .in-div:nth-child(3) {
+    button {
+      background: none;
+      border: none;
+      padding: 5px 0;
+      float: right;
+      color: red;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: $blue1;
+    }
+  }
+
+  .ant-calendar-picker-icon svg {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .svg {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .in-div:nth-child(1) {
+    .st0 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: none;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .st1 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #ffffff;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .st2 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #0089c4;
+    }
+  }
+
+  .in-div:nth-child(2) {
+    .st0 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: none;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .st1 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #ffffff;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .st2 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #008ac3;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+
+  .in-div:nth-child(3) {
+    .st0 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: none;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .st1 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: #ffffff;
+      stroke: #0089c4;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .container {
+      padding-left: 25px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .plan-travel {
+    display: block;
+    border: 1px solid #a7a9ac;
+    //height: 450px;
+    background: $white;
+    padding: 30px 0;
+
+    .main-div {
+
+      display: block;
+      text-align: center;
+
+      .in-div {
+        display: inline-block;
+        vertical-align: top;
+        margin: 1% 0;
+        padding: 0 40px;
+        min-height: 360px;
+        border-right: 1px solid #a7a9ac;
+        border-bottom: none;
+        width: 33%;
+      }
+
+      li:last-child {
+        margin-right: 0;
+        border: none;
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// .plan-travel:after {
+//   z-index: -1;
+//   content: "";
+//   position: absolute;
+//   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+//   height: 20%;
+//   left: 15%;
+//   right: 15%;
+//   width: 70%;
+//   bottom: 0px;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   border-radius: 100%;
+// }

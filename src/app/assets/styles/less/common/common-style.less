@@ -1,0 +1,61 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.title-hr{
+    border: none !important;
+    height: 2px !important;
+    margin-bottom: 25px;
+    display: block !important;
+    background: @border-color-base;
+    position: relative;
+    &:before{
+        content: "";
+        width: 20%;
+        height: 3px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background: @primary-color;
+    }
+}
+.right-fl{float: right;}
+
+.gray-bg {
+    margin: -25px;
+    padding: 25px;
+    background: #f0f2f5;
+}
+.radio-test-price-wrapper {
+    .ant-radio-button-wrapper{
+        width: 150px;
+        float: left;
+        height: auto;
+        border-radius: 15px;
+        margin-right: 18px;
+        border-left-width: 1px;
+        text-align: center;
+        padding-bottom: 10px;
+        .radio-test-price{
+            .pricing-title{
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+            .pricing-amount{
+                font-size: 40px;
+                .pricing-amount-currency{
+                    vertical-align: middle;
+                    font-size: 12px;
+                }
+            }
+            .pricing-results{
+                font-weight: 400;
+                font-size: 12px;
+            }
+        }
+    }
+    .ant-radio-button-wrapper:before{
+        border: none;
+        background-color: transparent;
+    }
+}

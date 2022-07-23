@@ -1,0 +1,252 @@
+.testform{
+    // background-image: url(../../../../images/register-bg.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // padding: 40px;
+    // @media (max-width: 991px) {
+    //     padding: 20px;
+    // }
+    min-height: calc(100vh - 90px);
+    .inner-form-wrap {
+        max-width: 1400px;
+        margin: auto;
+        background: rgba(255,255,255,0.89);
+        .right-img{
+            img{
+                width: 100%;
+            }
+        }
+        .steps-action{
+            .ant-btn-primary{
+                background-color: #f68e1e;
+                border: none;
+                &:hover{
+                    background-color: #1b1e6d;   
+                }
+            }
+        }
+    }
+    .form-type{
+        &.ant-steps-label-horizontal{
+            flex-wrap: wrap;
+        }
+            .ant-steps-item{
+                padding: 10px;
+                width: 33.33%;
+                &:first-child {
+                    padding-left: 10px;
+                }
+                @media (max-width: 767px) { 
+                    width: 100%;
+                    .ant-steps-item-tail{
+                        display: none !important;
+                    }
+                }
+                @media (min-width: 768px) { 
+                    width: 33.33%;
+                }
+                .ant-steps-item-container{
+                    border-radius: 4px;
+                    text-align: center;
+                    padding: 20px;
+                    box-shadow: 0px 0px 10px rgba(124, 204, 224, 0.31);
+                    background: #fff;
+                    @media (max-width: 991px) {
+                        padding: 10px;
+                    }
+                    @media (max-width: 767px) { 
+                        text-align: left;
+                    }
+                    .ant-steps-item-content{
+                        @media (max-width: 767px) { 
+                            display: inline;
+                        }  
+                    }
+                    span{
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                            position: relative;
+                            top: 4px;
+                            margin-right: 5px;
+                            fill: @primary-color;
+                        }
+                    }
+                    .ant-steps-item-title{
+                        display: inline-block;
+                        font-size: 18px;
+                        margin: 0px;
+                        /* text-transform: uppercase; */
+                        line-height: 38px;
+                        @media (max-width: 991px) {
+                            font-size: 15px;
+                        }
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+                &.ant-steps-item-active{
+                    .ant-steps-item-container{
+                        background-color: @primary-color;
+                        color: @white;
+                        .ant-steps-item-title{
+                            color: @white;                             
+                        }
+                        span{
+                            svg{
+                                fill: @white;
+                            }
+                        }
+                    }
+                }
+            }    
+            
+    }
+    .form-column{
+        @media (min-width: 768px) {  
+            padding: 20px;
+        }
+    }
+
+
+
+    .steps-content{
+        @media (max-width: 991px) {           
+            .form-column{
+                padding: 10px;
+                .ant-steps{
+                   justify-content: center;
+                   flex-wrap: wrap;
+                    .ant-steps-item{
+                        flex: 33%;
+                        padding: 0px;
+                        text-align: center;                        
+                        .ant-steps-item-container{
+                            background-color: #f7f7f7;
+                            margin: 5px;
+                            padding: 7px 5px 5px;
+                            .ant-steps-item-tail{
+                                display: none;
+                            }
+                            .ant-steps-item-title{
+                                line-height: 36px;
+                                &:after{
+                                    display: none;
+                                }
+                            }                           
+                        }
+                        &.ant-steps-item-active{
+                            .ant-steps-item-container{
+                                background-color: @primary-color;
+                                color: @white;
+                                .ant-steps-icon, .ant-steps-item-title{
+                                    color: @white; 
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ant-steps-item-container{
+            @media (max-width: 767px) { 
+                text-align: left;
+            }
+            .ant-steps-item-content{
+                @media (max-width: 767px) { 
+                    display: inline;
+                }  
+            }
+        }
+        .form-section-title{
+            padding: 10px 15px;
+            background: rgba(0,0,0,0.02);
+            margin-top: 20px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+        .divWaiver {
+            background: #f5f8fa;
+            padding: 20px;
+            max-height: 240px;
+            overflow: auto;
+        }
+
+        .ant-steps-item-active, .ant-steps-item-finish{
+            .ant-steps-item-title{
+                color: @primary-color;   
+            }
+        } 
+        .radio-test-price-wrapper {
+            .ant-radio-button-wrapper{
+                width: 150px;
+                float: left;
+                height: auto;
+                border-radius: 15px;
+                margin-right: 18px;
+                border-left-width: 1px;
+                text-align: center;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                .radio-test-price{
+                    .pricing-title{
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-top: 10px;
+                    }
+                    .pricing-amount{
+                        font-size: 40px;
+                        .pricing-amount-currency{
+                            vertical-align: middle;
+                            font-size: 12px;
+                        }
+                    }
+                    .pricing-results{
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+                }
+                &:hover{
+                    background: #4044af;
+                    color: #fff;
+                }
+                &.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+                    background: #4044af;
+                    color: #fff;
+                }
+            }
+            .ant-radio-button-wrapper:before{
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+
+.horizontal-form{
+    .ant-form-item {
+        flex-direction: unset;
+        justify-content: space-between;
+        background: #eaf3f9;
+        padding: 4px;
+        .ant-col.ant-form-item-control {
+            flex-grow: unset;
+        }
+        .ant-form-item-label {
+            padding: 5px;
+        }
+    }
+}
+
+.testform .ant-form label {
+    font-size: 14px !important;
+}
+.stripiBadge{
+    max-width: 420px;
+    margin-top: 20px;
+    width: 100%;
+}
